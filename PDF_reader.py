@@ -24,6 +24,10 @@ class PDF_READER():
     def on_drop(self, event):
         self.file_path = event.data
 
+        if '{' and '}' in self.file_path:
+            self.file_path = self.file_path.replace('{', '')
+            self.file_path = self.file_path.replace('}', '')
+
         if os.path.isfile(self.file_path):
             if self.file_path.lower().endswith(".pdf"):
                 abs_path = os.path.abspath(self.file_path)

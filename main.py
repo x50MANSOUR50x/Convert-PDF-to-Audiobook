@@ -11,7 +11,7 @@ def program():
 
     text_extraxter = TEXT_EXTRAXTER(pdf_file=pdf_path)
 
-    text = text_extraxter.pdf_text[0]
+    text = text_extraxter.pdf_text_as_list
 
     # print(len(text))
     # print(type(text))

@@ -1,5 +1,4 @@
 import PyPDF2
-from certifi import contents
 
 
 class TEXT_EXTRAXTER():
@@ -10,7 +9,8 @@ class TEXT_EXTRAXTER():
 
             # print(reader)
 
-            self.pdf_text = []
+            self.pdf_text_as_list = []
+            self.pdf_text_as_str = []
 
             # print(reader.pages)
 
@@ -18,7 +18,11 @@ class TEXT_EXTRAXTER():
                 # print(page)
                 content = page.extract_text()
                 # print(content)
-                self.pdf_text.append(content)
+                self.pdf_text_as_list.append(content)
+                # self.pdf_text_as_str.append(f"\n{ content }")
 
-
+            # for page in self.pdf_text_as_list:
+            #     # print(page)
+            #     self.pdf_text_as_str.append(f"\n {page}")
+            #     # print(self.pdf_text_as_str)
 
