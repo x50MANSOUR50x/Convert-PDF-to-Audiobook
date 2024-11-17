@@ -17,7 +17,7 @@ def program():
     # print(type(text))
     # print(text)
 
-    audiobook = TEXT_CONVERTER(text)
+    audiobook = TEXT_CONVERTER(text=text, pdf_path=pdf_path)
 
     if (input('Would you like to try again? Enter "yes" or "no"\n').lower() == "yes"):
         program()
