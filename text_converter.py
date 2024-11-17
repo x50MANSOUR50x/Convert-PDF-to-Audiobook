@@ -1,5 +1,8 @@
 import pyttsx3
 import os
+import pyautogui
+
+
 
 class TEXT_CONVERTER():
     def __init__(self, text: str, pdf_path: str):
@@ -14,3 +17,5 @@ class TEXT_CONVERTER():
             # print(pdf_path)
             os.startfile(filepath=pdf_path)
             self.text_speech.runAndWait()
+
+            pyautogui.hotkey('alt', 'f4')
